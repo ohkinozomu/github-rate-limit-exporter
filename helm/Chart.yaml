@@ -1,0 +1,9 @@
+apiVersion: v2
+name: github-rate-limit-exporter
+description: github-rate-limit-exporter Helm Chart
+
+type: application
+
+version: 0.0.1
+
+appVersion: "0.0.1"
