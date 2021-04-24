@@ -21,7 +21,8 @@ jobs:
 
       - name: Dry run
         run: |
-          helm install --dry-run github-rate-limit-exporter ./helm
+          helm install --dry-run --debug github-rate-limit-exporter ./helm
+          helm install --dry-run --debug github-rate-limit-exporter ./helm --set accessToken="testAccessToken"
 
       - name: Install github-rate-limit-exporter
         run: |
@@ -30,6 +31,6 @@ jobs:
       - name: Check running
         run: |
           # hack
-          sleep 10
+          sleep 15
 
           helm test github-rate-limit-exporter

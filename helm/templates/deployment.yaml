@@ -45,11 +45,11 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if ne .Values.accessToken "" -}}
+          {{ if ne .Values.accessToken "" }}
           envFrom:
             - secretRef:
-                name: {{ include "github-rate-limit-exporter.serviceAccountName" . }}
-          {{- end -}}
+                name: {{ include "github-rate-limit-exporter.fullname" . }}
+          {{ end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
