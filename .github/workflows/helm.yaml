@@ -1,0 +1,35 @@
+name: Helm test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  helm-test:
+    name: Helm test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup kind
+        uses: engineerd/setup-kind@v0.5.0
+        with:
+          version: "v0.10.0"
+
+      - name: Dry run
+        run: |
+          helm install --dry-run github-rate-limit-exporter ./helm
+
+      - name: Install github-rate-limit-exporter
+        run: |
+          helm install github-rate-limit-exporter ./helm
+          
+      - name: Check running
+        run: |
+          # hack
+          sleep 10
+
+          helm test github-rate-limit-exporter

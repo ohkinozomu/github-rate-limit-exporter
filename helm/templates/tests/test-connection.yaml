@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "github-rate-limit-exporter.fullname" . }}-test-connection"
+  labels:
+    {{- include "github-rate-limit-exporter.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: curl
+      image: curlimages/curl
+      args: ['{{ include "github-rate-limit-exporter.fullname" . }}:{{ .Values.service.port }}/metrics']
+  restartPolicy: Never
