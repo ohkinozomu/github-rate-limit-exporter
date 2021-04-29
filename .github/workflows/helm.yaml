@@ -21,12 +21,12 @@ jobs:
 
       - name: Dry run
         run: |
-          helm install --dry-run --debug github-rate-limit-exporter ./helm/github-rate-limit-exporter
-          helm install --dry-run --debug github-rate-limit-exporter ./helm/github-rate-limit-exporter --set accessToken="testAccessToken"
+          helm install --dry-run --debug github-rate-limit-exporter ./helm/charts/github-rate-limit-exporter
+          helm install --dry-run --debug github-rate-limit-exporter ./helm/charts/github-rate-limit-exporter --set accessToken="testAccessToken"
 
       - name: Install github-rate-limit-exporter
         run: |
-          helm install github-rate-limit-exporter ./helm/github-rate-limit-exporter
+          helm install github-rate-limit-exporter ./helm/charts/github-rate-limit-exporter
           
       - name: Check running
         run: |
@@ -57,11 +57,11 @@ jobs:
 
       - name: Dry run
         run: |
-          helm install --dry-run --debug github-rate-limit-exporter ./helm/github-rate-limit-exporter --set serviceMonitor.create="true"
+          helm install --dry-run --debug github-rate-limit-exporter ./helm/charts/github-rate-limit-exporter --set serviceMonitor.create="true"
 
       - name: Install github-rate-limit-exporter
         run: |
-          helm install github-rate-limit-exporter ./helm/github-rate-limit-exporter --set serviceMonitor.create="true"
+          helm install github-rate-limit-exporter ./helm/charts/github-rate-limit-exporter --set serviceMonitor.create="true"
           
       - name: Check running
         run: |
