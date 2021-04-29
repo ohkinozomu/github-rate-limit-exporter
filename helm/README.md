@@ -8,12 +8,12 @@ github-rate-limit-exporter Helm Chart
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| accessToken | string | `""` |  |
+| accessToken | string | `""` | GitHub access token |
 | affinity | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"ohkinozomu/github-rate-limit-exporter"` |  |
-| image.tag | string | `"v0.0.1"` |  |
+| image.tag | string | `"v0.0.1"` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
@@ -24,9 +24,10 @@ github-rate-limit-exporter Helm Chart
 | securityContext | object | `{}` |  |
 | service.port | int | `8080` |  |
 | service.type | string | `"ClusterIP"` |  |
-| serviceAccount.annotations | object | `{}` |  |
-| serviceAccount.create | bool | `true` |  |
-| serviceAccount.name | string | `""` |  |
+| serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| serviceAccount.name | string | `""` | The name of the service account to use. -- If not set and create is true, a name is generated using the fullname template |
+| serviceMonitor | object | `{"annotations":{},"create":false,"name":""}` | Prometheus Operator ServiceMonitor |
 | tolerations | list | `[]` |  |
 
 ----------------------------------------------
