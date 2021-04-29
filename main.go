@@ -130,6 +130,8 @@ func main() {
 	m := NewMetrics()
 	go m.record()
 
+	runFeatures()
+
 	http.Handle("/metrics", promhttp.Handler())
 	http.ListenAndServe(":8080", nil)
 }
