@@ -1,6 +1,6 @@
 # github-rate-limit-exporter
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.0.1](https://img.shields.io/badge/AppVersion-0.0.1-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.0.1](https://img.shields.io/badge/AppVersion-0.0.1-informational?style=flat-square)
 
 github-rate-limit-exporter Helm Chart
 
@@ -27,7 +27,9 @@ github-rate-limit-exporter Helm Chart
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | The name of the service account to use. -- If not set and create is true, a name is generated using the fullname template |
-| serviceMonitor | object | `{"annotations":{},"create":false,"name":""}` | Prometheus Operator ServiceMonitor |
+| serviceMonitor.annotations | object | `{}` |  |
+| serviceMonitor.create | bool | `false` |  |
+| serviceMonitor.prometheusOperatorRelease | string | `"prometheus-kube-prometheus-stack"` |  |
 | tolerations | list | `[]` |  |
 
 ----------------------------------------------

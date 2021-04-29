@@ -5,7 +5,7 @@ metadata:
   name: {{ include "github-rate-limit-exporter.fullname" . }}
   labels:
     {{- include "github-rate-limit-exporter.labels" . | nindent 4 }}
-    release: prometheus-kube-prometheus-stack
+    release: {{ .Values.serviceMonitor.prometheusOperatorRelease }}
   {{- with .Values.serviceAccount.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}

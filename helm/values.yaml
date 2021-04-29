@@ -57,8 +57,7 @@ affinity: {}
 # -- GitHub access token
 accessToken: ""
 
-# -- Prometheus Operator ServiceMonitor
 serviceMonitor:
   create: false
   annotations: {}
-  name: ""
+  prometheusOperatorRelease: "prometheus-kube-prometheus-stack"
