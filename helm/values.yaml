@@ -1,13 +1,9 @@
-# Default values for github-rate-limit-exporter.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
 replicaCount: 1
 
 image:
   repository: ohkinozomu/github-rate-limit-exporter
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
+  # -- Overrides the image tag whose default is the chart appVersion.
   tag: "v0.0.1"
 
 imagePullSecrets: []
@@ -15,12 +11,12 @@ nameOverride: ""
 fullnameOverride: ""
 
 serviceAccount:
-  # Specifies whether a service account should be created
+  # -- Specifies whether a service account should be created
   create: true
-  # Annotations to add to the service account
+  # -- Annotations to add to the service account
   annotations: {}
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
+  # -- The name of the service account to use.
+  # -- If not set and create is true, a name is generated using the fullname template
   name: ""
 
 podAnnotations: {}
@@ -58,5 +54,11 @@ tolerations: []
 
 affinity: {}
 
-# GitHub access token
+# -- GitHub access token
 accessToken: ""
+
+# -- Prometheus Operator ServiceMonitor
+serviceMonitor:
+  create: false
+  annotations: {}
+  name: ""
