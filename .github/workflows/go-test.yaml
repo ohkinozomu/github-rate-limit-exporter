@@ -1,11 +1,11 @@
-name: test
+name: Go test
 on: push
 jobs:
   test:
-    name: test
+    name: Go test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Run test
+      - name: Run Go test
         run: make test
