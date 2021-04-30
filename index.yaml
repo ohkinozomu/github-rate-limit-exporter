@@ -3,6 +3,16 @@ entries:
   github-rate-limit-exporter:
   - apiVersion: v2
     appVersion: 0.0.3
+    created: "2021-04-30T05:24:57.620777482Z"
+    description: github-rate-limit-exporter Helm Chart
+    digest: 0d2e55cd4ee29e66a9cde39f4810b7cb5cef3edad322061cbba3cf3fa42c21fd
+    name: github-rate-limit-exporter
+    type: application
+    urls:
+    - https://github.com/ohkinozomu/github-rate-limit-exporter/releases/download/github-rate-limit-exporter-0.1.0/github-rate-limit-exporter-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
+    appVersion: 0.0.3
     created: "2021-04-30T04:50:23.242670127Z"
     description: github-rate-limit-exporter Helm Chart
     digest: 198def9a75c326717a07353bed2d711b643c03917996715da8af3bc4474a361a
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/ohkinozomu/github-rate-limit-exporter/releases/download/github-rate-limit-exporter-0.0.5/github-rate-limit-exporter-0.0.5.tgz
     version: 0.0.5
-generated: "2021-04-30T04:50:23.242678927Z"
+generated: "2021-04-30T05:24:57.620791682Z"
