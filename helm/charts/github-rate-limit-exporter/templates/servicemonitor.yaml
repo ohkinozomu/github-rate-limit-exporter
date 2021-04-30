@@ -13,7 +13,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "github-rate-limit-exporter.fullname" . }}
+      app.kubernetes.io/name: {{ include "github-rate-limit-exporter.name" . }}
   endpoints:
     - targetPort: http
 {{- end }}
