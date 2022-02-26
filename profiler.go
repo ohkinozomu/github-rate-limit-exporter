@@ -9,7 +9,7 @@ import (
 
 func StartProfiler() error {
 	c := ncp.Config{
-		Registry:        "pyroscope",
+		Registry:        ncp.PYROSCOPE,
 		ApplicationName: "github-rate-limit-exporter",
 		ServerAddress:   os.Getenv("SERVER_ADDRESS"),
 	}
