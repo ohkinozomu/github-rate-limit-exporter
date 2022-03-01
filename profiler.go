@@ -22,7 +22,7 @@ func StartProfiler() error {
 		Registry:        registry,
 		ApplicationName: "github-rate-limit-exporter",
 		ServerAddress:   os.Getenv("SERVER_ADDRESS"),
-		Version:         "0.0.8",
+		Version:         "0.1.0",
 	}
 	ncp := ncp.NeutralCP{Config: c}
 
