@@ -1,5 +1,7 @@
 # github-rate-limit-exporter
 
+GitHub rate limit Prometheus exporter
+
 ## Install(Kubernetes)
 
 ```bash
