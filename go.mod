@@ -1,6 +1,6 @@
 module github.com/ohkinozomu/github-rate-limit-exporter
 
-go 1.16
+go 1.19
 
 require (
 	github.com/ohkinozomu/neutral-cp v0.1.1
